@@ -11,6 +11,7 @@ ANpc::ANpc()
 
 }
 
+
 // Called when the game starts or when spawned
 void ANpc::BeginPlay()
 {
@@ -31,3 +32,30 @@ void ANpc::Tick(float DeltaTime)
 
 }
 
+// method used to get a new random direction 
+FVector ANpc::ChangeNpcDirection(FVector currentDirection)
+{
+	int iRandom = rand() % 3;
+	FVector nextDirection = FVector(0, 0, 0);
+	do {
+		switch (iRandom) {
+		case 0: // up direction
+			nextDirection = FVector(1, 0, 0);
+			break;
+		case 1: // down direction 
+			nextDirection = FVector(-1, 0, 0);
+			break;
+		case 2: // right direction
+			nextDirection = FVector(1, 0, 0);
+			break;
+		case 3: // left direction
+			nextDirection = FVector(-1, 0, 0);
+			break;
+		default:
+			nextDirection = FVector(0, 0, 0);
+			break;
+		}
+
+	} while (nextDirection==currentDirection);
+	return FVector();
+}

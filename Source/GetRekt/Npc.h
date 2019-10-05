@@ -7,13 +7,21 @@
 #include "Npc.generated.h"
 
 UCLASS()
+
 class GETREKT_API ANpc : public AActor
 {
 	GENERATED_BODY()
+
+		
+private:
+	//current direction of the NPC
+	FVector vCurrentDirection;
+	 
 	
 public:	
 	// Sets default values for this actor's properties
 	ANpc();
+	FVector ChangeNpcDirection(FVector currentDirection);
 
 protected:
 	// Called when the game starts or when spawned
@@ -22,5 +30,6 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	
 
 };
