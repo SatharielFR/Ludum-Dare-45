@@ -16,12 +16,18 @@ void ANpc::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	
 }
 
 // Called every frame
 void ANpc::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	int X = this->GetActorLocation().X;
+	int Y = this->GetActorLocation().Y;
+	int Z = this->GetActorLocation().Z;
+	this->SetActorLocation(FVector(X+10, Y, Z), false, false);
 
 }
 
