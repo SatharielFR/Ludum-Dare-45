@@ -13,6 +13,8 @@
 #define RANGE 360*PI/180
 #define SCREEN_SIZE 1950
 
+
+
 UCLASS()
 class GETREKT_API AEnemySpawn : public AActor
 {

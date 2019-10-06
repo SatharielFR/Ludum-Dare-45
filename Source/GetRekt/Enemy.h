@@ -3,6 +3,7 @@
 #pragma once
 
 #include <time.h>
+#include <stdlib.h>
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
@@ -30,4 +31,7 @@ public:
 
 	FVector vecDirection;
 
+private :
+	//MainCharacter* player;
+	//TObjectArrayIterator<MainCharacter> player;
 };
