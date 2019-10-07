@@ -150,7 +150,11 @@ void ANpc::ChangeNpcDirection()
 			}
 		}
 	}
+	
 
 	this->setCurrentDirection(nextDirection);
+}
+void ANpc::destroyNpc() {
+	this->Destroy();
 }
 
